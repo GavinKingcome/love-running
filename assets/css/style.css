@@ -1,0 +1,32 @@
+/* Asterisk wildcard selector to overide default styles set by browser */
+/* Reset default browser styles */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Ensure html and body span the full height */
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100vh; /* Full viewport height */
+  display: flex; /* Flex container */
+  flex-direction: column; /* Stack children vertically */
+  color: #3a3a3a; /* Generic font color */
+}
+
+header {
+  background-color: lightcoral;
+}
+
+main {
+  background-color: lightskyblue;
+  flex: 1 0 auto; /* Grow to fill remaining space */
+}
+
+footer {
+  background-color: orange;
+}
