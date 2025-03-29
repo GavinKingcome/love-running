@@ -16,6 +16,7 @@ body {
   display: flex; /* Flex container */
   flex-direction: column; /* Stack children vertically */
   color: #3a3a3a; /* Generic font color */
+  font-family: 'Lato', sans-serif; /* Font family */
 }
 
 header {
