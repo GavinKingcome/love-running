@@ -20,12 +20,16 @@ body {
 }
 
 header {
-  background-color: lightcoral;
+  background-color: #ffffff;
+  padding: 0 1rem;
+  position: fixed;
+  z-index: 99; /* Sticky header */
+  width: 100%;
+  box-shadow: 0 2px 4px #3a3a3a;
 }
 
 h1 {
   font-family: "Oswald", sans-serif;
-  
 }
 
 main {
