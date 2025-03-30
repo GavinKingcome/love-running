@@ -28,8 +28,20 @@ header {
   box-shadow: 0 2px 4px #3a3a3a;
 }
 
+header a {
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Inherit color from parent */
+}
+
+header a:hover {
+  color: lightcoral; /* Optional: Change color on hover */
+}
+
 h1 {
   font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #252525;
 }
 
 main {
