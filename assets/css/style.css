@@ -44,6 +44,18 @@ h1 {
   color: #252525;
 }
 
+#menu {
+  list-style: none; /* Remove default list style */
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+}
+#menu li {
+  margin-bottom: 1rem; /* Space between menu items */
+}
+
+.active {
+  border-bottom: 1px solid #3a3a3a; /* Underline active link */
+}
 main {
   background-color: lightskyblue;
   flex: 1 0 auto; /* Grow to fill remaining space */
