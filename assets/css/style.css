@@ -22,7 +22,7 @@ body {
 header {
   background-color: #ffffff;
   padding: 0 1rem;
-  position: fixed;
+  position: relative;
   z-index: 99; /* Sticky header */
   width: 100%;
   box-shadow: 0 2px 4px #3a3a3a;
@@ -46,15 +46,28 @@ h1 {
 
 #menu {
   list-style: none; /* Remove default list style */
-  font-size: 1.5rem;
-  letter-spacing: 2px;
+  font-size: 110%;
+  letter-spacing: 4px;
 }
 #menu li {
-  margin-bottom: 1rem; /* Space between menu items */
+  margin-bottom: 1em; /* Space between menu items */
 }
 
 .active {
   border-bottom: 1px solid #3a3a3a; /* Underline active link */
+}
+
+/* Nav bar styles with drop down menu  */
+nav {
+  position: absolute;
+  background-color: #ffffff;
+  width: 100%;
+  left: 0;
+  padding: 0 1rem;
+  box-shadow: 0 2px 2px #3a3a3a;
+  display: none;
+
+  /* Padding for nav bar */
 }
 main {
   background-color: lightskyblue;
@@ -63,4 +76,21 @@ main {
 
 footer {
   background-color: orange;
+}
+/* Media query: tablets and larger (768px and up) */
+@media screen and (min-width: 768px) {
+  /*Header  */
+  nav {
+    display: flex; /* Flex container */
+    justify-content: flex-end;
+    align-items: center; /* Space between items */
+    position: relative;
+    box-shadow: none;
+    width: 100%;
+    padding-right: 1rem;
+  }
+  #menu {
+    display: flex; /* Flex container */
+    gap: 1rem; /* Space between menu items */
+  }
 }
