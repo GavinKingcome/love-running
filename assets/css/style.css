@@ -64,11 +64,10 @@ nav {
   width: 100%;
   left: 0;
   padding: 0 1rem;
-  box-shadow: 0 2px 2px #3a3a3a;
+  box-shadow: 0 2px 4px #3a3a3a;
   display: none;
-
-  /* Padding for nav bar */
 }
+
 main {
   background-color: lightskyblue;
   flex: 1 0 auto; /* Grow to fill remaining space */
