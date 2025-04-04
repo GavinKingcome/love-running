@@ -26,6 +26,9 @@ header {
   z-index: 99; /* Sticky header */
   width: 100%;
   box-shadow: 0 2px 4px #3a3a3a;
+  display: flex; /* Flex container */
+  justify-content: space-between; /* Space between items */
+  align-items: baseline; /* Align items vertically */
 }
 
 header a {
@@ -66,6 +69,21 @@ nav {
   padding: 0 1rem;
   box-shadow: 0 2px 4px #3a3a3a;
   display: none;
+  top: 100%; /* Position below header */
+}
+
+/* Nav toggle */
+#nav-toggle:checked ~ nav {
+  display: block; /* Show nav when toggle is checked */
+}
+
+#nav-toggle {
+  display: none; /* Hide checkbox */
+}
+
+.nav-toggle-label {
+  font-size: 2rem; /* Font size for toggle */
+  cursor: pointer; /* Pointer cursor on hover */
 }
 
 main {
