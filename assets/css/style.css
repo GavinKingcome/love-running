@@ -27,6 +27,7 @@ header {
   width: 100%;
   box-shadow: 0 2px 4px #3a3a3a;
   display: flex; /* Flex container */
+  flex-shrink: 0;
   justify-content: space-between; /* Space between items */
   align-items: baseline; /* Align items vertically */
 }
@@ -98,16 +99,17 @@ footer {
 @media screen and (min-width: 768px) {
   /*Header  */
   nav {
-    display: flex; /* Flex container */
-    justify-content: flex-end;
-    align-items: center; /* Space between items */
+    display: block; /* Flex container */
     position: relative;
     box-shadow: none;
-    width: 100%;
+    width: fit-content;
     padding-right: 1rem;
   }
   #menu {
     display: flex; /* Flex container */
     gap: 1rem; /* Space between menu items */
+  }
+  .nav-toggle-label {
+    display: none; /* Hide toggle label */
   }
 }
