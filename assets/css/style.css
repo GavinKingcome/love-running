@@ -37,10 +37,6 @@ header a {
   color: inherit; /* Inherit color from parent */
 }
 
-header a:hover {
-  color: lightcoral; /* Optional: Change color on hover */
-}
-
 h1 {
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
@@ -58,7 +54,7 @@ h1 {
 }
 
 .active {
-  border-bottom: 1px solid #3a3a3a; /* Underline active link */
+  border-bottom: none; /* Underline active link */
 }
 
 /* Nav bar styles with drop down menu  */
@@ -116,5 +112,11 @@ footer {
     line-height: 75px; /* Center logo vertically */
     font-size: 280%; /* Font size for logo */
     margin: 0 0.5rem; /* Space around logo */
+  }
+  /* Large devices and laptops, >= 992px */
+  @media screen and (min-width: 992px) {
+    #menu a:hover {
+      color: lightcoral; /* Change color on hover */
+    }
   }
 }
