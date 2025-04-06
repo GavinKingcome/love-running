@@ -112,4 +112,9 @@ footer {
   .nav-toggle-label {
     display: none; /* Hide toggle label */
   }
+  #logo {
+    line-height: 75px; /* Center logo vertically */
+    font-size: 280%; /* Font size for logo */
+    margin: 0 0.5rem; /* Space around logo */
+  }
 }
