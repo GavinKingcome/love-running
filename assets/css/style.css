@@ -117,6 +117,7 @@ footer {
   @media screen and (min-width: 992px) {
     #menu a:hover {
       color: lightcoral; /* Change color on hover */
+      font-weight: 900; /* Bold text on hover */
     }
   }
 }
