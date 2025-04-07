@@ -49,6 +49,11 @@ h1 {
   font-size: 110%;
   letter-spacing: 4px;
 }
+/* Make nav bar elements on mobile drop down bold when tapped to give visual cue*/
+#menu a:active {
+  font-weight: bold; /* Make text bold on tap */
+  color: lightcoral; /* Optional: Change text color on tap */
+}
 #menu li {
   margin-bottom: 1em; /* Space between menu items */
 }
@@ -82,14 +87,23 @@ nav {
   font-size: 2rem; /* Font size for toggle */
   cursor: pointer; /* Pointer cursor on hover */
 }
-
+/* Main element */
 main {
   background-color: lightskyblue;
   flex: 1 0 auto; /* Grow to fill remaining space */
 }
-
-footer {
-  background-color: orange;
+/* Footer element*/
+#social-networks {
+  display: flex; /* Flex container */
+  text-align: center; /* Center items */
+  padding: 20px 0;
+  justify-content: space-evenly; /* Center items */
+  list-style-type: none; /* Remove default list style, the bullet points in this case */
+}
+#social-networks i {
+  font-size: 160%; /* Space between social icons */
+  padding: 5%;
+  color: #3a3a3a; /* Generic font color */
 }
 /* Media query: tablets and larger (768px and up) */
 @media screen and (min-width: 768px) {
