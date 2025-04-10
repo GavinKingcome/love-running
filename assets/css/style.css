@@ -27,7 +27,7 @@ header {
   width: 100%;
   box-shadow: 0 2px 4px #3a3a3a;
   display: flex; /* Flex container */
-  flex-shrink: 0;
+  flex-shrink: 0; /* Prevent shrinking */
   justify-content: space-between; /* Space between items */
   align-items: baseline; /* Align items vertically */
 }
@@ -50,27 +50,34 @@ h1 {
   letter-spacing: 4px;
 }
 /* Make nav bar elements on mobile drop down bold when tapped to give visual cue*/
-#menu a:active {
-  font-weight: bold; /* Make text bold on tap */
-  color: lightcoral; /* Optional: Change text color on tap */
+/*#menu a:active {
+  border-bottom: 2px solid #252525; /* Keep the border for the active link */
 }
 #menu li {
   margin-bottom: 1em; /* Space between menu items */
 }
-
-.active {
-  border-bottom: none; /* Underline active link */
+/* Add padding to navigation links to fix underline position */
+#menu a {
+  text-decoration: none; /* Remove default underline */
+  color: inherit; /* Keep the default text color */
+  border-bottom: 2px solid transparent; /* Invisible border by default */
+  padding: 0.2rem 0; /* Add padding to adjust underline position */
+  display: inline-block; /* Ensure padding is applied properly */
+  transition: border-bottom 0.3s ease; /* Smooth transition for hover effect */
+}
+#menu a.active {
+  border-bottom: 2px solid #252525; /* Underline active link */
 }
 
 /* Nav bar styles with drop down menu  */
 nav {
-  position: absolute;
+  position: absolute; /* Position relative to header */
   background-color: #ffffff;
   width: 100%;
   left: 0;
-  padding: 0 1rem;
+  padding: 0 1rem 0.5rem; /* Space around nav */
   box-shadow: 0 2px 4px #3a3a3a;
-  display: none;
+  display: none; /* Hide by default */
   top: 100%; /* Position below header */
 }
 
@@ -130,8 +137,7 @@ main {
   /* Large devices and laptops, >= 992px */
   @media screen and (min-width: 992px) {
     #menu a:hover {
-      color: lightcoral; /* Change color on hover */
-      font-weight: 900; /* Bold text on hover */
+      border-bottom: 2px solid #252525; /* Underline on hover */
     }
   }
 }
