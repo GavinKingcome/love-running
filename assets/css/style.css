@@ -96,10 +96,19 @@ nav {
 }
 /* Main element */
 main {
-  background-color: lightskyblue;
+  /* Make main element take up any surplus space to push footer down */
   flex: 1 0 auto; /* Grow to fill remaining space */
+  margin-top: 0; /* Space below header */
+}
+
+/* Hero section */
+#hero {
+  min-height: calc(100vh - 47px - 70px); /* Full viewport height minus header and footer heights */
+  width: 100%;
+  background : url("../images/hero-image.webp") no-repeat center center/cover; /* Background image */
 }
 /* Footer element*/
+
 #social-networks {
   display: flex; /* Flex container */
   text-align: center; /* Center items */
@@ -112,6 +121,11 @@ main {
   padding: 5%;
   color: #3a3a3a; /* Generic font color */
 }
+footer {
+  height:auto; /* Auto height */
+  min-height: 50px; /* Minimum height */
+}
+
 /* Media query: tablets and larger (768px and up) */
 @media screen and (min-width: 768px) {
   /*Header  */
