@@ -155,7 +155,21 @@ hr {
   border-top: 1px solid #3a3a3a;
   margin: 5px 0;
 }
+#circle-cover-bg {
+  background: url("../images/reasons-image.webp") no-repeat top center/cover; /* Background image */
+  height: 90vw; /* Height of circle */
+  width: 90vw; /* Width of circle */
+  border-radius: 50%; /* Circle shape */
+  margin-bottom: 20px; /* Space below circle */
+  max-width: 300px; /* Maximum width */
+  max-height: 300px; /* Maximum height */
+}
 
+#benefits-image {
+  display: flex; /* Flex container */
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+}
 
 /* Footer element*/ 
 #social-networks {
