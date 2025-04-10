@@ -15,8 +15,16 @@ body {
   min-height: 100vh; /* Full viewport height */
   display: flex; /* Flex container */
   flex-direction: column; /* Stack children vertically */
+  /* Generic project styles */
   color: #3a3a3a; /* Generic font color */
   font-family: "Lato", sans-serif; /* Font family */
+}
+
+h1, h2, h3 {
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #252525;
 }
 
 header {
@@ -107,8 +115,25 @@ main {
   width: 100%;
   background : url("../images/hero-image.webp") no-repeat center center/cover; /* Background image */
 }
-/* Footer element*/
 
+#cover-text {
+  /* the final font number, (0.7) here, adjusts opacity*/
+  background-color: rgb(241, 109, 107, 0.7); /* Semi-transparent background */
+  font-size: 130%;
+  position: absolute; /* Position relative to parent */
+  bottom: 15%; /* Position from bottom */
+  width: 80%; /* Width of text */
+  min-height: 200px; /* Minimum height */
+  padding-top: 40px; /* Space above text */
+  padding-left: 15px; /* Space left */
+}
+
+#cover-text > h2,  #cover-text > h3 {
+  color: #ffffff; /* White text color */
+  
+}
+
+/* Footer element*/ 
 #social-networks {
   display: flex; /* Flex container */
   text-align: center; /* Center items */
@@ -148,6 +173,19 @@ footer {
     font-size: 280%; /* Font size for logo */
     margin: 0 0.5rem; /* Space around logo */
   }
+
+
+
+/* Hero */
+#cover-text {
+  width: 300px; /* Width of text */
+  left: 50px;
+
+}
+
+}
+
+#cover-text {
   /* Large devices and laptops, >= 992px */
   @media screen and (min-width: 992px) {
     #menu a:hover {
