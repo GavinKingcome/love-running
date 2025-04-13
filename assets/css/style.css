@@ -170,7 +170,33 @@ hr {
   align-items: center; /* Center items vertically */
   justify-content: center; /* Center items horizontally */
 }
+/*Meet-up times section*/
 
+#times {
+  background: url("../images/dublin-city.webp") no-repeat center/cover; /* Background image */
+  /* Handles responsively without the need for a media query */
+  display: flex; /* Flex container */
+  flex-wrap: wrap; /* Wrap items */
+  
+}
+
+#times > div {
+  color: #fafafa; /* White text color */
+  background-color: rgba(0, 0, 0, 0.5); /* black Semi-transparent background, creates ovelay to improve contrast between background imagr and text */
+  padding : 15px; /* Space around text */
+  text-align: center; /* Center text */
+  /* This will not wrap on screens less than 400px.
+   Each div will expand to fill the available space in its row*/
+  flex-basis: 200px; /* Minimum width of each item */
+  flex-grow: 1; /* Allow items to grow */
+  /* Create grid with white border */
+  border: 2px solid #fafafa; /* White border */
+
+}
+#times h3 {
+  /* Overide the heading color set in general styles */
+  color: #fafafa;
+}
 /* Footer element*/ 
 #social-networks {
   display: flex; /* Flex container */
