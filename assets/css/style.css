@@ -26,7 +26,12 @@ h1, h2, h3 {
   letter-spacing: 2px;
   color: #252525;
 }
-
+.hidden-heading {
+  display: none; /* Hide heading */
+}
+/* Generic styles for headings */
+h
+/* Header */
 header {
   background-color: #ffffff;
   padding: 0 1rem;
