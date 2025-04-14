@@ -104,6 +104,7 @@ nav {
 }
 
 .nav-toggle-label {
+  display: block;
   font-size: 2rem; /* Font size for toggle */
   cursor: pointer; /* Pointer cursor on hover */
 }
@@ -187,7 +188,7 @@ hr {
 
 #times > div {
   color: #fafafa; /* White text color */
-  background-color: rgba(0, 0, 0, 0.5); /* black Semi-transparent background, creates ovelay to improve contrast between background imagr and text */
+  background-color: rgba(0, 0, 0, 0.5); /* black Semi-transparent background, creates ovelay to improve contrast between background image and text */
   padding : 15px; /* Space around text */
   text-align: center; /* Center text */
   /* This will not wrap on screens less than 400px.
