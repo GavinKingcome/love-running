@@ -20,7 +20,9 @@ body {
   font-family: "Lato", sans-serif; /* Font family */
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -30,7 +32,7 @@ h1, h2, h3 {
   display: none; /* Hide heading */
 }
 /* Generic styles for headings */
-h
+
 /* Header */
 header {
   background-color: #ffffff;
@@ -42,7 +44,7 @@ header {
   display: flex; /* Flex container */
   flex-shrink: 0; /* Prevent shrinking */
   justify-content: space-between; /* Space between items */
-  align-items: baseline; /* Align items vertically */
+  align-items: center; /* Align items vertically */
 }
 
 header a {
@@ -58,14 +60,19 @@ h1 {
 }
 
 #menu {
+  display: block;
   list-style: none; /* Remove default list style */
   font-size: 110%;
   letter-spacing: 4px;
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  gap: 1rem; /* Space between menu items */
+  align-items: center;
 }
 /* Make nav bar elements on mobile drop down bold when tapped to give visual cue*/
 /*#menu a:active {
   border-bottom: 2px solid #252525; /* Keep the border for the active link */
-}
+
 #menu li {
   margin-bottom: 1em; /* Space between menu items */
 }
@@ -84,13 +91,13 @@ h1 {
 
 /* Nav bar styles with drop down menu  */
 nav {
+  display: none;
   position: absolute; /* Position relative to header */
   background-color: #ffffff;
-  width: 100%;
-  left: 0;
+  width: auto;
+  right: 0; /* Align to right */
   padding: 0 1rem 0.5rem; /* Space around nav */
   box-shadow: 0 2px 4px #3a3a3a;
-  display: none; /* Hide by default */
   top: 100%; /* Position below header */
 }
 
@@ -107,6 +114,10 @@ nav {
   display: block;
   font-size: 2rem; /* Font size for toggle */
   cursor: pointer; /* Pointer cursor on hover */
+  position: absolute; /* Position relative to parent */
+  top: 0.5rem; /* Position from top */
+  right: 1rem; /* Position from right */
+  z-index: 100; /* Above other elements */
 }
 /* Main element */
 main {
@@ -117,9 +128,11 @@ main {
 
 /* Hero section */
 #hero {
-  min-height: calc(100vh - 47px - 70px); /* Full viewport height minus header and footer heights */
+  min-height: calc(
+    100vh - 47px - 70px
+  ); /* Full viewport height minus header and footer heights */
   width: 100%;
-  background : url("../images/hero-image.webp") no-repeat center center/cover; /* Background image */
+  background: url("../images/hero-image.webp") no-repeat center center/cover; /* Background image */
 }
 
 #cover-text {
@@ -134,9 +147,9 @@ main {
   padding-left: 15px; /* Space left */
 }
 
-#cover-text > h2,  #cover-text > h3 {
+#cover-text > h2,
+#cover-text > h3 {
   color: #ffffff; /* White text color */
-  
 }
 
 #reasons {
@@ -149,10 +162,10 @@ main {
   margin-bottom: 20px; /* Space below heading */
   font-size: 280%; /* Font size for heading */
 }
-#benefits-physical>div,
-#benefits-mental>div {
-    line-height: 20px;
-    margin-bottom: 20px;
+#benefits-physical > div,
+#benefits-mental > div {
+  line-height: 20px;
+  margin-bottom: 20px;
 }
 #benefits p {
   padding: 0 20px;
@@ -183,13 +196,17 @@ hr {
   /* Handles responsively without the need for a media query */
   display: flex; /* Flex container */
   flex-wrap: wrap; /* Wrap items */
-  
 }
 
 #times > div {
   color: #fafafa; /* White text color */
-  background-color: rgba(0, 0, 0, 0.5); /* black Semi-transparent background, creates ovelay to improve contrast between background image and text */
-  padding : 15px; /* Space around text */
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* black Semi-transparent background, creates ovelay to improve contrast between background image and text */
+  padding: 15px; /* Space around text */
   text-align: center; /* Center text */
   /* This will not wrap on screens less than 400px.
    Each div will expand to fill the available space in its row*/
@@ -197,13 +214,23 @@ hr {
   flex-grow: 1; /* Allow items to grow */
   /* Create grid with white border */
   border: 2px solid #fafafa; /* White border */
-
 }
 #times h3 {
   /* Overide the heading color set in general styles */
   color: #fafafa;
 }
-/* Footer element*/ 
+
+/* Gallery page */
+#photos img {
+  width: 100%; /* Full width */
+}
+
+#photos {
+  line-height: 0;
+  display: block;
+}
+
+/* Footer element*/
 #social-networks {
   display: flex; /* Flex container */
   text-align: center; /* Center items */
@@ -217,23 +244,32 @@ hr {
   color: #3a3a3a; /* Generic font color */
 }
 footer {
-  height:auto; /* Auto height */
+  height: auto; /* Auto height */
   min-height: 50px; /* Minimum height */
+}
+
+/* Media query large or landscape phones 576px and up */
+@media screen and (min-width: 576px) {
+  #photos {
+    column-count: 2; /* Two columns */
+    column-gap: 0;
+  }
 }
 
 /* Media query: tablets and larger (768px and up) */
 @media screen and (min-width: 768px) {
   /* Header */
   nav {
-    display: block; /* Flex container */
+    display: flex; /* Flex container */
     position: relative;
     box-shadow: none;
-    width: fit-content;
+    width: auto;
     padding-right: 1rem;
   }
   #menu {
     display: flex; /* Flex container */
     gap: 1rem; /* Space between menu items */
+    align-self: bottom; /* Align items to the bottom */
   }
   .nav-toggle-label {
     display: none; /* Hide toggle label */
@@ -266,6 +302,10 @@ footer {
     text-align: end; /* Align text to the right */
     align-self: flex-end; /* Align item to the right */
   }
+  /* Gallery */
+  #photos {
+    column-count: 3; /* Three columns */
+  }
 }
 
 /* Media query: larger screens (992px and up) */
@@ -273,12 +313,17 @@ footer {
   #menu a:hover {
     border-bottom: 1px solid #252525; /* Underline on hover */
   }
+
+  /* Gallery */
+  #photos {
+    column-count: 4; /* Four columns */
+  }
 }
 /* Media query: larger screens (1200px and up) */
 @media screen and (min-width: 1200px) {
   /* Reasons section */
   #benefits {
-    display: flex;  /* Flex container */
+    display: flex; /* Flex container */
     flex-direction: row; /* Stack items horizontally */
   }
   #benefits > div {
@@ -296,7 +341,4 @@ footer {
   #benefits-physical > div {
     align-self: flex-end; /* Align item to the right */
   }
-
 }
- 
-
