@@ -40,10 +40,8 @@
       href="assets/favicon/favicon-16x16.png"
     />
     <link rel="icon" href="favicon.ico" />
-
-    <!-- Style sheet -->
-    <link rel="stylesheet" href="assets/css/style.css" />
   </head>
+
   <body>
     <!-- Header element-->
     <header>
@@ -59,16 +57,97 @@
       <!--Navigation-->
       <nav>
         <ul id="menu">
-          <li><a href="index.html"</a>Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="gallery.html">Gallery</a></li>
           <li><a href="signup.html" class="active">Sign Up</a></li>
         </ul>
       </nav>
-
     </header>
 
     <!-- Main content -->
-    <main>Main Content</main>
+    <main role="main">
+      <section id="signup">
+        <form
+          action="https://formdump.codeinstitute.net"
+          id="signup-form"
+          method="post"
+        >
+          <h2>
+            <i class="fa-solid fa-heartbeat" aria-hidden="true"></i>Let's get
+            you signed up!
+          </h2>
+
+          <label for="first-name">First name:</label>
+          <input
+            type="text"
+            class="text-input"
+            id="first-name"
+            name="first-name"
+            required
+          />
+          <br />
+
+          <label for="last-name">Last name:</label>
+          <input
+            type="text"
+            class="text-input"
+            id="last-name"
+            name="last-name"
+            required
+          />
+          <br />
+
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            class="text-input"
+            id="email"
+            name="email"
+            required
+          />
+          <br />
+
+          <!-- Radio buttons -->
+          <div class="radio-buttons">
+            <div>
+              <label for="road">Road</label>
+              <input
+                type="radio"
+                name="running-preferences"
+                id="road"
+                value="road"
+                required
+                checked
+              />
+            </div>
+            <div>
+              <label for="trail">Trail</label>
+              <input
+                type="radio"
+                name="running-preferences"
+                id="trail"
+                value="trail"
+                required
+                checked
+              />
+            </div>
+            <div>
+              <label for="both">Both</label>
+              <input
+                type="radio"
+                name="running-preferences"
+                id="radio"
+                value="radio"
+                required
+                checked
+              />
+            </div>
+          </div>
+          <!-- Join button -->
+          <button type="submit" class="join-button">Let's run!</button>
+        </form>
+      </section>
+    </main>
 
     <!-- Footer add social media icons-->
     <footer>
@@ -95,7 +174,7 @@
 
         <li>
           <a
-            href="https://facebook.com"
+            href="https://www.instagram.com/gavinkingcome/?next=%2F&hl=en"
             target="_blank"
             rel="noopener"
             aria-label="Visit our instagram page (opens in a new tab)"
